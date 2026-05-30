@@ -9,6 +9,7 @@ struct Segment {
 
 // ==========================================
 // PHYSICAL PIN CONFIGURATION
+// (I'm using the Arduino analog pins A0-A5 in reverse order here)
 // ==========================================
 const int pA6 = A0;
 const int pA5 = A1;
@@ -79,10 +80,10 @@ void loop() {
   // EXAMPLE CONTROL DEMO
   // ==========================================
   
-  setNumber(97);         // Display the number 42
+  setNumber(42);         // Display the number 42
   setPercentage(true);   // Show the percentage sign
-  setLightning(true);   // Turn off the lightning bolt
-  setWaterdrop(1);       // Light up exactly 2 bars of the waterdrop
+  setLightning(false);   // Turn off the lightning bolt
+  setWaterdrop(2);       // Light up exactly 2 bars of the waterdrop
 
   // Must call this continuously in your loop to keep the display illuminated
   driveDisplay();
